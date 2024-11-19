@@ -20,7 +20,7 @@ This tool allows you to test multiple APIs and models in parallel for connectivi
 1. Fill in your `api_key` and `api_url` in api_config.json
 2. **Just run the script**
   ```bash
-  cd apipool_testor_DirtyRattie
+  cd apipool_testor_DR
   python apipool_testor.py
   ```
 
@@ -29,7 +29,7 @@ This tool allows you to test multiple APIs and models in parallel for connectivi
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-repo/api-testing-tool.git
+git clone https://github.com/DirtyRattie/apipool_testor_DR.git
 cd api-testing-tool
 ```
 
@@ -60,7 +60,7 @@ Define the models, system prompt, and user prompt to test. Example:
 
 ```json
 {
-    "models": ["gpt-4", "gpt-3.5-turbo"],
+    "models": ["gpt-4o", "claude-3-5-20241022"],
     "system_prompt": "Answer briefly",
     "user_prompt": "Who are you?"
 }
@@ -68,22 +68,7 @@ Define the models, system prompt, and user prompt to test. Example:
 
 ### 3. Ensure Security
 
-You can save your private api in `api_config.json`. Make sure `api_config.json`is written in`.gitignore` to prevent uploading your keys
-
-```
-# Prevent sensitive data from being uploaded
-api_config.json
-```
-
-## Usage
-
-1. Run the tool:
-   
-```bash
-python test_apis.py
-```
-
-2. View the results in the terminal.
+You can save your private api in `api_config.json`. `api_config.json`is written in`.gitignore` by default to prevent uploading your keys.
 
 ## Output Example
 
@@ -93,10 +78,10 @@ The tool will display results like this:
 --- Testing Results ---
 
 API URL: https://your-api-url.com/v1/chat/completions
-  - Model: gpt-4
+  - Model: gpt-4o
     Status: accessible
     Reply: Hello! How can I assist you today?
-  - Model: gpt-3.5-turbo
+  - Model: claude-3-5-20241022
     Status: failed (status code: 401)
     Error: Unauthorized access
 

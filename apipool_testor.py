@@ -5,9 +5,10 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def load_config(file_path):
     """
+    Load JSON configuration file
     加载JSON配置文件
-    :param file_path: JSON文件路径
-    :return: 配置内容的字典
+    :param file_path: Path to the JSON file / JSON文件路径
+    :return: Dictionary containing the configuration content / 配置内容的字典
     """
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -22,6 +23,7 @@ def load_config(file_path):
 
 def test_api_model(api, model, system_prompt, user_prompt):
     """
+    Test a single API and a single model.
     单独测试一个 API 和一个模型。
     :param api: Dict containing 'api_url' and 'api_key'
     :param model: Model name to test
@@ -72,6 +74,7 @@ def test_api_model(api, model, system_prompt, user_prompt):
 
 def test_apis_and_models(api_config, test_config):
     """
+    Test multiple APIs and models in parallel.
     并行测试多个 API 和多个模型。
     :param api_config: API配置内容
     :param test_config: 测试配置内容
@@ -82,7 +85,7 @@ def test_apis_and_models(api_config, test_config):
     models = test_config["models"]
 
     with ThreadPoolExecutor() as executor:
-        # 创建所有任务
+        # Create all tasks / 创建所有任务
         tasks = {
             executor.submit(test_api_model, api, model, system_prompt, user_prompt): (api, model)
             for api in api_config
@@ -91,7 +94,7 @@ def test_apis_and_models(api_config, test_config):
         for future in as_completed(tasks):
             results.append(future.result())
 
-    # 整理输出结果
+    # groupe result / 整理输出结果
     print("\n--- Testing Results ---\n")
     grouped_results = {}
     for result in results:
@@ -100,7 +103,7 @@ def test_apis_and_models(api_config, test_config):
             grouped_results[api_url] = []
         grouped_results[api_url].append(result)
 
-    # 输出结果为清晰的格式
+    # test output format / 输出结果为清晰的格式
     for api_url, models in grouped_results.items():
         print(f"API URL: {api_url}")
         for model_info in models:
@@ -115,9 +118,9 @@ def test_apis_and_models(api_config, test_config):
 
 
 if __name__ == "__main__":
-    # 加载配置
+    # load contig / 加载配置
     api_config = load_config("api_config.json")
     test_config = load_config("test_config.json")
 
-    # 执行测试
+    # test / 执行测试
     test_apis_and_models(api_config, test_config)
