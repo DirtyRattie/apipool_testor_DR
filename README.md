@@ -1,7 +1,7 @@
 
 
 # API Testing Tool
-
+apipool_testor_DirtyRattie
 
 
 ## Introduction
@@ -16,7 +16,13 @@ This tool allows you to test multiple APIs and models in parallel for connectivi
 - Results are displayed in a clear and organized format.
 - Secure API key storage.
 
-
+## Quick Use
+1. Fill in your `api_key` and `api_url` in api_config.json
+2. **Just run the script**
+  ```bash
+  cd apipool_testor_DirtyRattie
+  python apipool_testor.py
+  ```
 
 ## Installation
 
