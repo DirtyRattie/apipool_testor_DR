@@ -1,0 +1,16 @@
+[
+    {
+        "api_url": "https://api.example1.com/v1/chat/completions",
+        "api_key": "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"},
+    {
+        "api_url": "https://api.example2.com/v1/chat/completions",
+        "api_key": "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"},
+    {
+        "api_url": "https://api.example3.com/v1/chat/completions",
+        "api_key": "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    {
+        "api_url": "https://api.example4.com/v1/chat/completions",
+        "api_key": "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+]
