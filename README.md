@@ -1,7 +1,7 @@
 
 
 # API Testing Tool
-apipool_testor_DirtyRattie
+apipool_testor_DR
 
 
 ## Introduction
