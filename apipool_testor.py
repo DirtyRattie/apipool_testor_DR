@@ -118,7 +118,7 @@ def test_apis_and_models(api_config, test_config):
 
 
 if __name__ == "__main__":
-    # load contig / 加载配置
+    # load config / 加载配置
     api_config = load_config("api_config.json")
     test_config = load_config("test_config.json")
 
