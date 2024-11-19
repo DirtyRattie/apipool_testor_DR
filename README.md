@@ -30,7 +30,7 @@ This tool allows you to test multiple APIs and models in parallel for connectivi
 
 ```bash
 git clone https://github.com/DirtyRattie/apipool_testor_DR.git
-cd api-testing-tool
+cd apipool_testor_DR
 ```
 
 2. Install the required dependencies
