@@ -17,7 +17,7 @@ This tool allows you to test multiple APIs and models in parallel for connectivi
 - Secure API key storage.
 
 ## Quick Use
-1. Fill in your `api_key` and `api_url` in `api_config_example.json`, save it into `api_config.json`.
+1. Fill in your `api_key` and `api_url` in `api_config_example.json`, **save it into `api_config.json`.**
 2. **Just run the script**
   ```bash
   cd apipool_testor_DR
@@ -68,7 +68,7 @@ Define the models, system prompt, and user prompt to test. Example:
 
 ### 3. Ensure Security
 
-You can save your private api in `api_config.json`. `api_config.json`is written in`.gitignore` by default to prevent uploading your keys.
+You can save your private api in `api_config.json`. `api_config.json`will not be uploaded by default to prevent uploading your keys.
 
 ## Output Example
 

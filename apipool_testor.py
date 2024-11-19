@@ -14,7 +14,7 @@ def load_config(file_path):
         with open(file_path, 'r', encoding='utf-8') as file:
             return json.load(file)
     except FileNotFoundError:
-        print(f"Error: Configuration file {file_path} not found.")
+        print(f"Error: Configuration file {file_path} not found. You may need to rename `api_config_example.json` and save it into `api_config.json`. Remember to write your keys and urls.")
         exit(1)
     except json.JSONDecodeError:
         print(f"Error: Failed to parse JSON configuration file {file_path}.")
