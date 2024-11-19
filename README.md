@@ -6,7 +6,7 @@ apipool_testor_DR
 
 ## Introduction
 
-This tool allows you to test multiple APIs and models in parallel for connectivity and accessibility. It helps identify which API endpoints and models are functional.
+This tool allows you to test multiple APIs and models in parallel for connectivity and accessibility more easliy. It helps identify which API endpoints and models are functional.
 
 
 ## Features
@@ -17,7 +17,7 @@ This tool allows you to test multiple APIs and models in parallel for connectivi
 - Secure API key storage.
 
 ## Quick Use
-1. Fill in your `api_key` and `api_url` in api_config.json
+1. Fill in your `api_key` and `api_url` in `api_config_example.json`, save it into `api_config.json`.
 2. **Just run the script**
   ```bash
   cd apipool_testor_DR
@@ -34,7 +34,6 @@ cd api-testing-tool
 ```
 
 2. Install the required dependencies
-   
 ```bash
 pip install -r requirements.txt
 ```
@@ -53,6 +52,7 @@ Add your API URLs and API keys to the `api_config.json` file. Example:
     }
 ]
 ```
+We have a template `api_config_example.json`.
 
 ### 2. Test Configuration (`test_config.json`)
 
